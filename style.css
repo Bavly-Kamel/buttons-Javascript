@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: cursive;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+button {
+  all: unset;
+  background: rgb(29, 20, 112);
+  color: white;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 15px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: gray;
+  color: whitesmoke;
+  border: 2px solid black;
+}
+
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  bottom: 20px; /* Position from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center align */
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Make sure it appears above other elements */
+  animation: fadeInOut 3s ease; /* Fade in and out animation */
+}
+
+/* Animation for fading in and out */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
